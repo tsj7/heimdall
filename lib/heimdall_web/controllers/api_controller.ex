@@ -8,7 +8,9 @@ defmodule HeimdallWeb.ApiController do
   def add_check_digit(conn, params) do
     check_digit_with_upc = _calculate_check_digit(params["upc"])
     _send_json(conn, 200, check_digit_with_upc)
+
   end
+  
 
   # this route takes a comma separated list and should add a check digit to each element
   # http://0.0.0.0:4000/api/add_a_bunch_of_check_digits/12345,233454,34341432
@@ -21,6 +23,7 @@ defmodule HeimdallWeb.ApiController do
   end
 
   # these are private methods
+
   defp _calculate_check_digit(upc) do
     #this is where your code to calculate the check digit should go
     upc
