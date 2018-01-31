@@ -1,4 +1,5 @@
-/ tygesNotes.ex
+*.tygesNotes.ex
+
 
 # App artifacts
 /_build
